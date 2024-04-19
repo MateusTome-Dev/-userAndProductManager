@@ -12,7 +12,7 @@ public class Sistema {
 		HandleMenu hm =new HandleMenu();
 		int opcao=0;
 		do {
-			System.out.print("1-Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar usuario especifico \n6 - Fazer Login \n9 - Sair\n");
+			System.out.print("1-Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar usuario especifico \n6 - Fazer Login \n7 - Trocar senha atual \n9 - Sair\n");
 			opcao=sc.nextInt();
 			switch(opcao){
 			case 1:{
@@ -37,6 +37,10 @@ public class Sistema {
 			}
 			case 6:{
 				hm.login();
+				break;
+			}
+			case 7:{
+				hm.trocaSenha();
 				break;
 			}
 			default:

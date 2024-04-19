@@ -12,7 +12,7 @@ public class SistemaProduto {
 		MenuProduto Mp =new MenuProduto();
 		int opcao=0;
 		do {
-			System.out.print("1-Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar usuario especifico \n6 - Sair\n");
+			System.out.print("1-Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar usuario especifico \n6 - Soma do produtos \n7 - Quantidades de produtos\n9 - Sair \n");
 			opcao=sc.nextInt();
 			switch(opcao){
 			case 1:{
@@ -33,6 +33,14 @@ public class SistemaProduto {
 			}
 			case 5:{
 				Mp.listarEspecifico();
+				break;
+			}
+			case 6:{
+				Mp.soma();
+				break;
+			}
+			case 7:{
+				Mp.somaQuant();
 				break;
 			}
 			default:

@@ -8,12 +8,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import models.Usuario;
 
 public class GerenciadorDeUsuarios {
 	private static final String NOME_ARQUIVO = "usuarios.txt";
-
+	Scanner sc=new Scanner(System.in);
 	// Verfica a existencia do bd e criar caso não exista
 	public void verificaECria(String nomeArquivo) {
 		File arquivo = new File(nomeArquivo);
@@ -137,5 +138,28 @@ public class GerenciadorDeUsuarios {
 		} else {
 			System.out.println("senha ou nome errado");
 		}
+	}
+	public void trocaSenha(int id,String nome, String senha) {
+		List<Usuario> usuarios = lerUsuarios();
+		boolean encontrado = false;
+		for (Usuario usuario : usuarios) {
+			if(usuario.getId()==id) {
+				if (senha.equals(usuario.getSenha())) {
+					System.out.println("digite a nova senha");
+					String novaSenha=sc.next();
+					usuario.setSenha(novaSenha);
+					encontrado = true;
+					if (encontrado = true) {
+						System.out.println("senha trocada com sucesso");
+						reescreverArquivo(usuarios);
+					} else {
+						System.out.println("senha ou nome errado");
+					}
+				}
+				
+			}
+		}
+		
+	
 	}
 }

@@ -44,7 +44,7 @@ public class MenuProduto {
 	}
 	public void listarEspecifico() {
 		System.out.println("Digite o id do usuario a ser listado: ");
-		int id=sc.nextInt();
+		long id=sc.nextInt();
 		gp.listarEspecifico(id);
 	}
 	public long getNextId() {
@@ -58,4 +58,13 @@ public class MenuProduto {
 		}
 		return maxId+1;
 	}
+	public void soma(){
+		System.out.println("essa é a soma de todos os produtos: ");
+		gp.soma();
+	}
+	public void somaQuant(){
+		System.out.println("essa é a soma das quantidade é: ");
+		gp.somaQuant();
+	}
+	
 }

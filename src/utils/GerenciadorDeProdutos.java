@@ -115,4 +115,22 @@ public class GerenciadorDeProdutos {
 			}
 		}
 	}
+	public void soma() {
+		List<Produto> produtos = lerProdutos();
+		 double soma = 0;
+		for (Produto produto: produtos) {
+			soma += produto.getPreco()*produto.getQuantidade();
+			
+		}
+		System.out.println(soma);
+	}
+	public void somaQuant() {
+		List<Produto> produtos = lerProdutos();
+		double somaQuant = 0;
+		for (Produto produto: produtos) {
+			somaQuant += produto.getQuantidade();
+		}
+		System.out.println(somaQuant);
+	}
 }
+	
